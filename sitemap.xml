@@ -30,5 +30,11 @@
     <loc>https://creovisia.vercel.app/contact.html</loc>
     <priority>0.6</priority>
   </url>
+  
+    <url>
+    <loc>https://creovisia.vercel.app/robot.txt</loc>
+    <priority>0.6</priority>
+  </url>
+
 
 </urlset>
