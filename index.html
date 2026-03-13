@@ -325,6 +325,10 @@
           <label>Phone Number <span class="form-note">(optional)</span></label>
           <input type="tel" id="fphone" placeholder="+91 XXXXX XXXXX">
         </div>
+        <div class="form-group">
+          <label>Age *</label>
+          <input type="number" id="fage" placeholder="e.g. 22" min="10" max="100">
+        </div>
         <div class="form-group form-full">
           <label>How did you find us?</label>
           <select id="fsource">
@@ -373,7 +377,7 @@
     <div>
       <div class="contact-item">
         <div class="contact-icon">✉</div>
-        <div><h4>Email</h4><p><a href="mailto:hello@creovisia.com">hello@creovisia.com</a></p></div>
+        <div><h4>Email</h4><p><a href="/cdn-cgi/l/email-protection#e189848d8d8ea18293848e9788928880cf828e8c"><span class="__cf_email__" data-cfemail="ec8489808083ac8f9e89839a859f858dc28f8381">[email&#160;protected]</span></a></p></div>
       </div>
       <div class="contact-item">
         <div class="contact-icon">⊙</div>
@@ -441,7 +445,7 @@
 
 <div class="toast" id="toast"></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   function toggleMenu(){
     const m=document.getElementById('mobile-menu');
     m.classList.toggle('open');
@@ -460,16 +464,59 @@
     const idea=document.getElementById('fidea').value.trim();
     if(!fname){showToast('Please enter your first name.');return;}
     if(!email||!email.includes('@')){showToast('Please enter a valid email address.');return;}
+    const age=document.getElementById('fage').value.trim();
+    if(!age||isNaN(age)||age<10||age>100){showToast('Please enter a valid age.');return;}
     if(!idea){showToast('Please share your idea or message.');return;}
     document.getElementById('join-form').style.display='none';
     document.getElementById('success-msg').style.display='block';
-  }
+   }
 
   // Scroll-aware nav
   window.addEventListener('scroll',()=>{
     const nav=document.querySelector('nav');
     nav.style.borderBottomColor=window.scrollY>50?'rgba(201,168,76,0.25)':'rgba(201,168,76,0.18)';
   });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init('m-BXlirOv6Q0ciDP9');
+
+  // Override handleSubmit with EmailJS version
+  function handleSubmit(){
+    const fname=document.getElementById('fname').value.trim();
+    const email=document.getElementById('femail').value.trim();
+    const age=document.getElementById('fage').value.trim();
+    const idea=document.getElementById('fidea').value.trim();
+    if(!fname){showToast('Please enter your first name.');return;}
+    if(!email||!email.includes('@')){showToast('Please enter a valid email address.');return;}
+    if(!age||isNaN(age)||Number(age)<10||Number(age)>100){showToast('Please enter a valid age.');return;}
+    if(!idea){showToast('Please share your idea or message.');return;}
+
+    const btn=document.querySelector('.submit-btn');
+    btn.textContent='Sending...';
+    btn.disabled=true;
+
+    const params={
+      first_name: fname,
+      last_name: document.getElementById('lname').value.trim()||'—',
+      email: email,
+      phone: document.getElementById('fphone').value.trim()||'—',
+      age: age,
+      source: document.getElementById('fsource').value||'Not specified',
+      message: idea
+    };
+
+    emailjs.send('service_ntg98ka','template_gybp3ce',params)
+      .then(()=>{
+        document.getElementById('join-form').style.display='none';
+        document.getElementById('success-msg').style.display='block';
+      })
+      .catch(()=>{
+        showToast('Something went wrong. Please try again.');
+        btn.textContent='Send Your Message \u2192';
+        btn.disabled=false;
+      });
+  }
 </script>
 </body>
 </html>
