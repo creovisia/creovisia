@@ -265,7 +265,7 @@ main {
 
 .about-box {
   width: 100%;
-  height: 450px;
+  height: 100%;
   border-radius: 30px;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
 }
@@ -686,7 +686,7 @@ Add inside style.css
   }
 
   .founder-image-box img {
-    min-height: 350px;
+    min-height: 100%;
   }
 
 }
