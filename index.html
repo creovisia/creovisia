@@ -1,524 +1,776 @@
+<!-- =========================================================
+FILE: index.html
+Professional SEO + Fully Responsive + Premium Structure
+========================================================= -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creovisia — Where Creative Ideas Turn Into Reality</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  :root{
-    --gold:#C9A84C;--gold-light:#E8C96A;--gold-dim:#8A6F2E;
-    --dark:#0A0A0A;--dark2:#111111;--dark3:#181818;--dark4:#222222;
-    --text:#F0EDE4;--text-muted:#9A9488;--text-dim:#5A574E;
-    --border:rgba(201,168,76,0.18);--border-dim:rgba(255,255,255,0.07);
+
+  <!-- Basic -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>
+    Creovisia | Creative Digital Agency, Web Development & Branding
+  </title>
+
+  <meta name="title" content="Creovisia | Creative Digital Agency, Web Development & Branding" />
+
+  <meta name="description"
+    content="Creovisia is a modern creative digital agency specializing in premium web development, UI/UX design, branding, AI-powered solutions, app development, and digital experiences for startups and businesses worldwide." />
+
+  <meta name="keywords"
+    content="Creovisia, creative agency, web development, UI UX design, branding agency, AI solutions, app development, responsive websites, futuristic websites, digital marketing, software company" />
+
+  <meta name="author" content="Creovisia" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.creovisia.vercel.app/" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#0b1020" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Creovisia | Creative Digital Agency" />
+
+  <meta property="og:description"
+    content="Premium web development, UI/UX design, branding, AI solutions, and modern digital experiences." />
+
+  <meta property="og:url" content="https://www.creovisia.vercel.app/" />
+
+  <meta property="og:image" content="https://www.creovisia.vercel.app/assets/images/preview.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="twitter:title" content="Creovisia | Creative Digital Agency" />
+
+  <meta name="twitter:description"
+    content="Modern digital experiences, branding, UI/UX, web development, and AI-powered solutions." />
+
+  <meta name="twitter:image" content="https://www.creovisia.vercel.app/assets/images/preview.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Creovisia",
+    "url":"https://www.creovisia.vercel.app",
+    "logo":"https://www.creovisia.vercel.app/assets/images/logo.png",
+    "description":"Creative digital agency specializing in web development, branding, UI UX design, and AI-powered digital solutions.",
+    "sameAs":[
+      "https://facebook.com/creovisia",
+      "https://instagram.com/creovisia",
+      "https://linkedin.com/company/creovisia"
+    ]
   }
-  html{scroll-behavior:smooth;font-size:16px}
-  body{background:var(--dark);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.7;overflow-x:hidden}
-  h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:500}
+  </script>
 
-  /* NAV */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.92);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);padding:0 5vw}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .nav-logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--gold);letter-spacing:0.04em;text-decoration:none}
-  .nav-logo span{color:var(--text);font-weight:400}
-  .nav-links{display:flex;gap:2rem;list-style:none}
-  .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.875rem;font-weight:400;letter-spacing:0.03em;transition:color 0.2s}
-  .nav-links a:hover{color:var(--gold)}
-  .nav-cta{background:var(--gold);color:var(--dark);padding:0.5rem 1.25rem;border-radius:4px;text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.03em;transition:background 0.2s}
-  .nav-cta:hover{background:var(--gold-light)}
-  .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-  .nav-hamburger span{width:22px;height:1.5px;background:var(--text-muted);display:block;transition:all 0.3s}
-  .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,0.98);border-bottom:0.5px solid var(--border);padding:1.5rem 5vw;z-index:99}
-  .mobile-menu.open{display:block}
-  .mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1.25rem}
-  .mobile-menu a{color:var(--text-muted);text-decoration:none;font-size:1rem}
-  .mobile-menu .nav-cta{display:inline-block;margin-top:0.5rem}
-
-  /* HERO */
-  #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 5vw 80px;position:relative;overflow:hidden}
-  .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,168,76,0.07) 0%,transparent 70%)}
-  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
-  .hero-line{width:1px;height:80px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);margin:0 auto 2.5rem}
-  .hero-label{font-size:0.75rem;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem;font-weight:500}
-  .hero-title{font-size:clamp(2.5rem,6vw,5rem);line-height:1.1;letter-spacing:-0.01em;margin-bottom:1.5rem;max-width:780px;position:relative}
-  .hero-title em{color:var(--gold);font-style:normal}
-  .hero-tagline{font-size:1.125rem;color:var(--text-muted);max-width:520px;margin:0 auto 3rem;font-weight:300;line-height:1.8}
-  .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-  .btn-primary{background:var(--gold);color:var(--dark);padding:0.875rem 2rem;border-radius:4px;text-decoration:none;font-size:0.9rem;font-weight:500;letter-spacing:0.04em;transition:all 0.2s;display:inline-block}
-  .btn-primary:hover{background:var(--gold-light);transform:translateY(-1px)}
-  .btn-ghost{border:0.5px solid var(--border);color:var(--text-muted);padding:0.875rem 2rem;border-radius:4px;text-decoration:none;font-size:0.9rem;font-weight:400;transition:all 0.2s;display:inline-block}
-  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-  .hero-badges{display:flex;gap:2.5rem;justify-content:center;margin-top:4rem;flex-wrap:wrap}
-  .hero-badge{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--text-dim)}
-  .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
-  .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--text-dim);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase}
-  .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollpulse 2s ease-in-out infinite}
-  @keyframes scrollpulse{0%,100%{opacity:0.3}50%{opacity:1}}
-
-  /* SECTIONS */
-  section{padding:100px 5vw}
-  .section-label{font-size:0.72rem;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;font-weight:500;margin-bottom:1rem}
-  .section-title{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.2;margin-bottom:1.5rem}
-  .section-divider{width:48px;height:1px;background:var(--gold);margin:0 auto 3rem}
-  .centered{text-align:center}
-
-  /* ABOUT */
-  #about{background:var(--dark2)}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1100px;margin:0 auto}
-  .about-text p{color:var(--text-muted);margin-bottom:1.25rem;font-weight:300;font-size:1.05rem}
-  .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
-  .stat-card{border:0.5px solid var(--border);padding:1.5rem;border-radius:6px;background:rgba(201,168,76,0.03)}
-  .stat-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);font-weight:500}
-  .stat-label{font-size:0.8rem;color:var(--text-dim);margin-top:0.25rem;letter-spacing:0.05em}
-  .about-visual{position:relative}
-  .about-card{background:var(--dark3);border:0.5px solid var(--border);border-radius:8px;padding:2rem}
-  .about-card-tag{font-size:0.72rem;letter-spacing:0.15em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem}
-  .about-card h3{font-size:1.1rem;margin-bottom:0.75rem;color:var(--text)}
-  .about-card p{font-size:0.9rem;color:var(--text-muted);font-weight:300}
-  .about-accent{position:absolute;top:-20px;right:-20px;width:80px;height:80px;border:0.5px solid var(--border);border-radius:50%;opacity:0.4}
-
-  /* PRODUCTS */
-  #products{background:var(--dark)}
-  .products-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:1100px;margin:0 auto}
-  .product-card{background:var(--dark3);border:0.5px solid var(--border-dim);border-radius:10px;padding:2.5rem;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s}
-  .product-card:hover{border-color:var(--border);transform:translateY(-4px)}
-  .product-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.6}
-  .product-badge{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.72rem;letter-spacing:0.15em;color:var(--gold);text-transform:uppercase;font-weight:500;margin-bottom:1.5rem;background:rgba(201,168,76,0.08);padding:0.3rem 0.75rem;border-radius:20px;border:0.5px solid rgba(201,168,76,0.2)}
-  .product-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold)}
-  .product-name{font-size:1.7rem;margin-bottom:0.75rem}
-  .product-desc{color:var(--text-muted);font-size:0.95rem;margin-bottom:2rem;font-weight:300;line-height:1.8}
-  .product-features{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2rem}
-  .product-features li{display:flex;align-items:center;gap:0.6rem;font-size:0.875rem;color:var(--text-muted)}
-  .product-features li::before{content:'';width:12px;height:1px;background:var(--gold);flex-shrink:0}
-  .product-link{color:var(--gold);font-size:0.85rem;font-weight:500;letter-spacing:0.05em;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;transition:gap 0.2s}
-  .product-link:hover{gap:0.7rem}
-  .product-num{position:absolute;bottom:1.5rem;right:1.75rem;font-family:'Playfair Display',serif;font-size:4rem;color:rgba(201,168,76,0.06);font-weight:700;line-height:1}
-
-  /* JOIN */
-  #join{background:var(--dark2)}
-  .join-wrap{max-width:680px;margin:0 auto}
-  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
-  .form-group{display:flex;flex-direction:column;gap:0.4rem}
-  .form-group label{font-size:0.8rem;color:var(--text-muted);letter-spacing:0.05em}
-  .form-group input,.form-group select,.form-group textarea{background:var(--dark3);border:0.5px solid var(--border-dim);color:var(--text);padding:0.75rem 1rem;border-radius:5px;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;width:100%}
-  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
-  .form-group select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23C9A84C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
-  .form-group select option{background:var(--dark3)}
-  .form-group textarea{resize:vertical;min-height:140px;line-height:1.6}
-  .form-full{grid-column:1/-1}
-  .form-note{font-size:0.78rem;color:var(--text-dim)}
-  .submit-btn{width:100%;background:var(--gold);color:var(--dark);border:none;padding:1rem;border-radius:5px;font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:500;letter-spacing:0.05em;cursor:pointer;margin-top:1.5rem;transition:background 0.2s}
-  .submit-btn:hover{background:var(--gold-light)}
-  .success-msg{display:none;text-align:center;padding:3rem 2rem;background:var(--dark3);border:0.5px solid var(--border);border-radius:8px}
-  .success-icon{width:48px;height:48px;border:0.5px solid var(--border);border-radius:50%;margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:var(--gold)}
-  .success-msg h3{color:var(--gold);margin-bottom:0.75rem;font-family:'Playfair Display',serif}
-  .success-msg p{color:var(--text-muted);font-size:0.9rem}
-
-  /* CONTACT */
-  #contact{background:var(--dark)}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:1000px;margin:0 auto;align-items:start}
-  .contact-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:2rem}
-  .contact-icon{width:36px;height:36px;border:0.5px solid var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;color:var(--gold)}
-  .contact-item h4{font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3rem}
-  .contact-item p{color:var(--text-muted);font-size:0.9rem}
-  .contact-item a{color:var(--text-muted);text-decoration:none;transition:color 0.2s}
-  .contact-item a:hover{color:var(--gold)}
-
-  /* SOCIAL LINKS */
-  .social-links{display:flex;flex-direction:column;gap:0.6rem;margin-top:1.5rem}
-  .social-link{display:flex;align-items:center;gap:0.9rem;color:var(--text-muted);text-decoration:none;font-size:0.88rem;padding:0.7rem 1rem;border:0.5px solid var(--border-dim);border-radius:6px;transition:all 0.2s;position:relative;overflow:hidden}
-  .social-link:hover{border-color:var(--border);color:var(--text);transform:translateX(3px)}
-  .social-link:hover .si{opacity:1}
-  .social-link::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;border-radius:0 2px 2px 0;opacity:0;transition:opacity 0.2s}
-  .social-link:hover::before{opacity:1}
-  .si{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;opacity:0.8;transition:opacity 0.2s}
-  .si svg{width:16px;height:16px}
-  .s-name{font-weight:500;font-size:0.875rem}
-  .s-handle{font-size:0.78rem;color:var(--text-dim);margin-left:auto;font-weight:300}
-  .sl-li .si{background:#0A66C2}.sl-li::before{background:#0A66C2}
-  .sl-ig .si{background:linear-gradient(135deg,#E1306C,#833AB4,#F77737)}.sl-ig::before{background:#E1306C}
-  .sl-tw .si{background:#000;border:0.5px solid rgba(255,255,255,0.1)}.sl-tw::before{background:#fff}
-  .sl-yt .si{background:#FF0000}.sl-yt::before{background:#FF0000}
-  .sl-th .si{background:#000;border:0.5px solid rgba(255,255,255,0.1)}.sl-th::before{background:#fff}
-  .sl-fb .si{background:#1877F2}.sl-fb::before{background:#1877F2}
-  .sl-gh .si{background:#24292e;border:0.5px solid rgba(255,255,255,0.1)}.sl-gh::before{background:#fff}
-
-  /* FOOTER */
-  footer{background:var(--dark2);border-top:0.5px solid var(--border-dim);padding:3rem 5vw}
-  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-  .footer-brand{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold)}
-  .footer-copy{font-size:0.8rem;color:var(--text-dim)}
-  .footer-links{display:flex;gap:1.5rem}
-  .footer-links a{font-size:0.8rem;color:var(--text-dim);text-decoration:none;transition:color 0.2s}
-  .footer-links a:hover{color:var(--gold)}
-  .footer-socials{display:flex;gap:0.75rem}
-  .footer-social-icon{width:28px;height:28px;border-radius:5px;display:flex;align-items:center;justify-content:center;opacity:0.5;transition:opacity 0.2s}
-  .footer-social-icon:hover{opacity:1}
-  .footer-social-icon svg{width:13px;height:13px}
-
-  /* TOAST */
-  .toast{position:fixed;bottom:2rem;right:2rem;background:var(--dark3);border:0.5px solid var(--border);color:var(--text);padding:1rem 1.5rem;border-radius:6px;font-size:0.875rem;transform:translateY(100px);opacity:0;transition:all 0.3s;z-index:999;max-width:300px}
-  .toast.show{transform:translateY(0);opacity:1}
-
-  /* RESPONSIVE */
-  @media(max-width:900px){
-    .about-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
-    .products-grid{grid-template-columns:1fr}
-  }
-  @media(max-width:768px){
-    .form-grid{grid-template-columns:1fr}
-    .about-stats{grid-template-columns:1fr 1fr}
-    .nav-links,.nav-cta{display:none}
-    .nav-hamburger{display:flex}
-    .hero-badges{gap:1.25rem}
-    .footer-inner{flex-direction:column;text-align:center}
-    .footer-links{justify-content:center}
-  }
-</style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="#hero">Creo<span>visia</span></a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#join">Join Us</a></li>
-      <li><a href="#contact">Contact</a></li>
-       <li><a href="founder.html">Founder</a></li>
-    </ul>
-    <a class="nav-cta" href="#join">Share Your Idea</a>
-    <div class="nav-hamburger" onclick="toggleMenu()" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
+  <!-- Loader -->
+  <div class="loader">
+    <div class="loader-ring"></div>
   </div>
-</nav>
-<div class="mobile-menu" id="mobile-menu">
-  <ul>
-    <li><a href="#about" onclick="closeMenu()">About</a></li>
-    <li><a href="#products" onclick="closeMenu()">Products</a></li>
-    <li><a href="#join" onclick="closeMenu()">Join Us</a></li>
-    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-    <li><a href="#join" class="nav-cta" onclick="closeMenu()">Share Your Idea</a></li>
-  </ul>
-</div>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-line"></div>
-  <p class="hero-label">Creovisia · Creativity Meets Reality</p>
-  <h1 class="hero-title">Where <em>Creative Ideas</em> Turn Into Reality</h1>
-  <p class="hero-tagline">Every great product begins as a spark of imagination. We exist to close the gap between what you envision and what the world experiences — building technology that brings bold ideas to life.</p>
-  <div class="hero-actions">
-    <a href="#products" class="btn-primary">See What We've Built</a>
-    <a href="#join" class="btn-ghost">Bring Your Idea</a>
-  </div>
-  <div class="hero-badges">
-    <span class="hero-badge">Tamil Nadu, India</span>
-    <span class="hero-badge">Creativity · Technology · Impact</span>
-    <span class="hero-badge">Early Stage · Seed Round</span>
-    <span class="hero-badge">Ideas Becoming Products</span>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    scroll
-  </div>
-</section>
+  <!-- Header -->
+  <header class="header">
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-grid">
-    <div class="about-text">
-      <p class="section-label">About Creovisia</p>
-      <h2 class="section-title">Born from the belief that ideas deserve to exist</h2>
-      <p>Creovisia — the fusion of <em style="color:var(--gold);font-style:normal">Creo</em> (to create) and <em style="color:var(--gold);font-style:normal">Visia</em> (vision) — was founded on one simple truth: the world loses countless brilliant ideas every day, not because they weren't good enough, but because they never found the right hands to build them.</p>
-      <p>We are those hands. A lean studio of builders, designers, and dreamers based in Tamil Nadu, crafting AI-powered digital products that transform raw imagination into working reality — starting with education, the space where ideas matter most.</p>
-      <p>Every product we ship is proof that creativity and technology, when fused with purpose, can change how people live, learn, and grow.</p>
-      <div class="about-stats">
-        <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Ideas turned into real products</div></div>
-        <div class="stat-card"><div class="stat-num">₹25L</div><div class="stat-label">Seed round to fuel more creation</div></div>
-        <div class="stat-card"><div class="stat-num">∞</div><div class="stat-label">Ideas still waiting to be built</div></div>
-        <div class="stat-card"><div class="stat-num">1</div><div class="stat-label">Mission — make creativity real</div></div>
-      </div>
-    </div>
-    <div class="about-visual">
-      <div class="about-accent"></div>
-      <div class="about-card">
-        <div class="about-card-tag">The Name</div>
-        <h3>Creo + Visia — Creating the vision you imagined</h3>
-        <p style="margin-top:0.75rem">The name Creovisia isn't just a brand — it's a promise. Every product we build, every line of code we write, every feature we ship is our answer to an idea someone believed in. We take the invisible and make it tangible.</p>
-        <div style="margin-top:2rem;padding-top:1.5rem;border-top:0.5px solid var(--border-dim)">
-          <div class="about-card-tag">Our Promise</div>
-          <p style="margin-top:0.5rem">If you can dream it clearly enough to describe it, we believe it can be built. That's not optimism — that's our operating principle. We start with your vision and we don't stop until it's real.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="container navbar">
 
-<!-- PRODUCTS -->
-<section id="products">
-  <div class="centered" style="margin-bottom:4rem">
-    <p class="section-label">Our Creations</p>
-    <h2 class="section-title">Ideas we turned into reality.</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="products-grid">
-    <div class="product-card">
-      <div class="product-badge">The Idea Made Real · EdTech SaaS</div>
-      <h3 class="product-name">Qublera</h3>
-      <p class="product-desc">The idea was simple — why do Tamil Nadu teachers spend hours manually drafting question papers when a smart tool could do it in seconds? That idea became Qublera: a bilingual question paper generator built for the State Board.</p>
-      <ul class="product-features">
-        <li>Tamil Nadu Class 10 State Board support</li>
-        <li>Bilingual (Tamil &amp; English) generation</li>
-        <li>PYQ tagging &amp; past year analysis</li>
-        <li>One-click PDF export</li>
-        <li>Firebase-authenticated prototype live</li>
-      </ul>
-      <a href="#contact" class="product-link">Request early access →</a>
-      <div class="product-num">01</div>
-    </div>
-    <div class="product-card">
-      <div class="product-badge">The Idea Made Real · AI Platform</div>
-      <h3 class="product-name">DoubtSolver</h3>
-      <p class="product-desc">The idea: every student deserves a patient, brilliant tutor available at any hour. That idea became DoubtSolver — an AI-powered platform that answers any academic doubt instantly, in plain language students actually understand.</p>
-      <ul class="product-features">
-        <li>Instant AI-powered doubt resolution</li>
-        <li>Curriculum-aligned explanations</li>
-        <li>Freemium model for mass accessibility</li>
-        <li>MVP web app &amp; architecture complete</li>
-        <li>Launching in Tamil Nadu first</li>
-      </ul>
-      <a href="#contact" class="product-link">Join the waitlist →</a>
-      <div class="product-num">02</div>
-    </div>
-  </div>
-</section>
+      <a href="#" class="logo">
+        Creo<span>visia</span>
+      </a>
 
-<!-- JOIN US -->
-<section id="join">
-  <div class="centered" style="margin-bottom:3.5rem">
-    <p class="section-label">Join the Mission</p>
-    <h2 class="section-title">Your idea could be our next creation</h2>
-    <p style="color:var(--text-muted);font-size:0.95rem;max-width:520px;margin:1rem auto 0;font-weight:300">Every product we've built started with someone who had an idea and dared to share it. Whether you're a creator, collaborator, investor, or dreamer — tell us what you're imagining.</p>
-  </div>
-  <div class="join-wrap">
-    <div id="join-form">
-      <div class="form-grid">
-        <div class="form-group">
-          <label>First Name *</label>
-          <input type="text" id="fname" placeholder="Your first name">
-        </div>
-        <div class="form-group">
-          <label>Last Name <span class="form-note">(optional)</span></label>
-          <input type="text" id="lname" placeholder="Your last name">
-        </div>
-        <div class="form-group">
-          <label>Email Address *</label>
-          <input type="email" id="femail" placeholder="you@example.com">
-        </div>
-        <div class="form-group">
-          <label>Phone Number <span class="form-note">(optional)</span></label>
-          <input type="tel" id="fphone" placeholder="+91 XXXXX XXXXX">
-        </div>
-        <div class="form-group">
-          <label>Age *</label>
-          <input type="number" id="fage" placeholder="e.g. 22" min="10" max="100">
-        </div>
-        <div class="form-group form-full">
-          <label>How did you find us?</label>
-          <select id="fsource">
-            <option value="" disabled selected>Select a platform or source</option>
-            <optgroup label="Social Media">
-              <option value="linkedin">LinkedIn</option>
-              <option value="instagram">Instagram</option>
-              <option value="twitter">X (Twitter)</option>
-              <option value="youtube">YouTube</option>
-              <option value="threads">Threads</option>
-              <option value="facebook">Facebook</option>
-              <option value="github">GitHub</option>
-            </optgroup>
-            <optgroup label="Other Sources">
-              <option value="google">Google Search</option>
-              <option value="friend">Friend / Referral</option>
-              <option value="event">Event or Conference</option>
-              <option value="press">Press / Article</option>
-              <option value="other">Other</option>
-            </optgroup>
-          </select>
-        </div>
-        <div class="form-group form-full">
-          <label>Your Idea or Message *</label>
-          <textarea id="fidea" placeholder="Describe your idea, vision, or what you'd like to create together. Don't hold back — the bigger the idea, the more excited we get."></textarea>
-        </div>
-      </div>
-      <button class="submit-btn" onclick="handleSubmit()">Send Your Message →</button>
-    </div>
-    <div class="success-msg" id="success-msg">
-      <div class="success-icon">✦</div>
-      <h3>Your Idea Has Landed</h3>
-      <p>We've received your vision. The Creovisia team will review it and get back to you within 48 hours. Great things are about to be created.</p>
-    </div>
-  </div>
-</section>
+      <nav>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="centered" style="margin-bottom:4rem">
-    <p class="section-label">Get in Touch</p>
-    <h2 class="section-title">Let's create something together</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="contact-grid">
-    <div>
-      <div class="contact-item">
-        <div class="contact-icon">✉</div>
-        <div><h4>Email</h4><p><a href="/cdn-cgi/l/email-protection#e189848d8d8ea18293848e9788928880cf828e8c"><span class="__cf_email__" data-cfemail="ec8489808083ac8f9e89839a859f858dc28f8381">[email&#160;protected]</span></a></p></div>
+        <ul class="nav-links">
+
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="blog/">Blog</a></li>
+
+        </ul>
+
+      </nav>
+
+      <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
       </div>
-      <div class="contact-item">
-        <div class="contact-icon">⊙</div>
-        <div><h4>Location</h4><p>Tamil Nadu, India</p></div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">◎</div>
-        <div><h4>Stage</h4><p>Early Stage · Open to Seed Investors</p></div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">→</div>
-        <div><h4>Response Time</h4><p>Within 48 hours on business days</p></div>
-      </div>
+
     </div>
-    <div>
-      <p class="section-label">Follow Us</p>
-      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1rem;font-weight:300">Watch ideas become reality in real time. Follow our creative journey as we build.</p>
-      <div class="social-links">
-        <a class="social-link sl-li" href="https://www.linkedin.com/in/creovisia-exe/" target="_blank" rel="noopener">
-          <span class="si"><svg viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
-          <span class="s-name">LinkedIn</span><span class="s-handle">creovisia</span>
+
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+      <div class="container hero-container">
+
+        <div class="hero-content">
+
+          <p class="hero-subtitle">
+            Creative Digital Agency
+          </p>
+
+          <h1>
+            Building Digital Experiences
+            Beyond Imagination
+          </h1>
+
+          <p class="hero-description">
+
+            Creovisia is a futuristic digital agency delivering
+            premium web development, branding, UI/UX design,
+            AI-powered solutions, and scalable digital products
+            for startups, creators, and businesses worldwide.
+
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#contact" class="btn primary-btn">
+              Start Project
+            </a>
+
+            <a href="#portfolio" class="btn secondary-btn">
+              View Portfolio
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-card">
+
+          <div class="hero-glow"></div>
+
+          <h2>120+</h2>
+          <p>Projects Completed</p>
+
+          <div class="hero-stats">
+
+            <div>
+              <h3>50+</h3>
+              <span>Clients</span>
+            </div>
+
+            <div>
+              <h3>98%</h3>
+              <span>Success</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-image">
+          <div class="about-box"></div>
+        </div>
+
+        <div class="about-content">
+
+          <p class="section-subtitle">About Us</p>
+
+          <h2 class="section-title">
+            We Transform Creative Ideas Into
+            Powerful Digital Experiences
+          </h2>
+
+          <p>
+
+            At Creovisia, we combine creativity,
+            strategy, and advanced technology to
+            build immersive digital experiences that
+            help brands stand out in today's competitive world.
+
+          </p>
+
+          <p>
+
+            Our expertise includes responsive website development,
+            modern UI/UX design, AI-powered solutions,
+            branding systems, and scalable applications
+            optimized for performance and user engagement.
+
+          </p>
+
+          <div class="about-features">
+
+            <div class="feature-card">
+              <i class="fa-solid fa-rocket"></i>
+              <h3>Fast Performance</h3>
+            </div>
+
+            <div class="feature-card">
+              <i class="fa-solid fa-layer-group"></i>
+              <h3>Modern UI/UX</h3>
+            </div>
+
+            <div class="feature-card">
+              <i class="fa-solid fa-brain"></i>
+              <h3>AI Integration</h3>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================================
+ABOUT FOUNDER SECTION (HTML)
+Add this section AFTER the About Section
+========================================================= -->
+
+    <section class="section founder-section" id="founder">
+
+      <div class="container founder-grid">
+
+        <!-- Founder Image -->
+        <div class="founder-image">
+
+          <div class="founder-image-box">
+
+            <!-- Replace with real founder image -->
+            <img src="assets/images/founder.jpg" alt="Founder of Creovisia" loading="lazy">
+
+          </div>
+
+        </div>
+
+        <!-- Founder Content -->
+        <div class="founder-content">
+
+          <p class="section-subtitle">
+            Founder & Visionary
+          </p>
+
+          <h2 class="section-title">
+            Meet The Founder Of Creovisia
+          </h2>
+
+          <h3 class="founder-name">
+            Your Founder Name
+          </h3>
+
+          <p class="founder-role">
+            Founder & Creative Director
+          </p>
+
+          <!-- =========================================================
+OPTIONAL PREMIUM BADGE (Add inside founder-content)
+========================================================= -->
+
+          <div class="founder-badge">
+            Visionary Leader • Creative Strategist • Digital Innovator
+          </div>
+
+
+          <p class="founder-description">
+
+            Creovisia was founded with a vision to transform
+            modern businesses through innovative digital experiences,
+            futuristic design systems, and cutting-edge technology.
+
+          </p>
+
+          <p class="founder-description">
+
+            With a passion for creativity and problem-solving,
+            the founder leads Creovisia in delivering premium
+            web development, UI/UX design, branding,
+            and AI-powered digital solutions for clients worldwide.
+
+          </p>
+
+          <!-- Founder Achievements -->
+          <div class="founder-stats">
+
+            <div class="founder-stat">
+
+              <h3>120+</h3>
+              <span>Projects</span>
+
+            </div>
+
+            <div class="founder-stat">
+
+              <h3>50+</h3>
+              <span>Clients</span>
+
+            </div>
+
+            <div class="founder-stat">
+
+              <h3>5+</h3>
+              <span>Years Experience</span>
+
+            </div>
+
+          </div>
+
+          <!-- Social Links -->
+          <div class="founder-socials">
+
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <p class="section-subtitle">Services</p>
+
+          <h2 class="section-title">
+            Innovative Digital Solutions
+          </h2>
+
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Web Development</h3>
+
+            <p>
+              High-performance responsive websites
+              built using modern technologies
+              and scalable architecture.
+            </p>
+
+          </article>
+
+          <article class="service-card">
+
+            <i class="fa-solid fa-pen-ruler"></i>
+
+            <h3>UI/UX Design</h3>
+
+            <p>
+              Beautiful interfaces and immersive
+              user experiences optimized for engagement.
+            </p>
+
+          </article>
+
+          <article class="service-card">
+
+            <i class="fa-solid fa-mobile-screen"></i>
+
+            <h3>App Development</h3>
+
+            <p>
+              Powerful mobile applications designed
+              for performance and scalability.
+            </p>
+
+          </article>
+
+          <article class="service-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Digital Marketing</h3>
+
+            <p>
+              Data-driven marketing strategies
+              that increase reach and conversions.
+            </p>
+
+          </article>
+
+          <article class="service-card">
+
+            <i class="fa-solid fa-palette"></i>
+
+            <h3>Brand Identity</h3>
+
+            <p>
+              Unique branding systems that create
+              memorable visual experiences.
+            </p>
+
+          </article>
+
+          <article class="service-card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h3>AI Solutions</h3>
+
+            <p>
+              Intelligent automation and AI-powered
+              digital workflows for businesses.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Why Us -->
+    <section class="section why-us" id="why-us">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <p class="section-subtitle">Why Choose Us</p>
+
+          <h2 class="section-title">
+            Premium Quality & Future Ready Solutions
+          </h2>
+
+        </div>
+
+        <div class="why-grid">
+
+          <div class="why-card">
+            ✔️ Modern Technology Stack
+          </div>
+
+          <div class="why-card">
+            ✔️ Fully Responsive Design
+          </div>
+
+          <div class="why-card">
+            ✔️ SEO Optimized Architecture
+          </div>
+
+          <div class="why-card">
+            ✔️ High Performance Websites
+          </div>
+
+          <div class="why-card">
+            ✔️ Creative UI/UX Systems
+          </div>
+
+          <div class="why-card">
+            ✔️ Scalable Digital Products
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Portfolio -->
+    <section class="section" id="portfolio">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <p class="section-subtitle">Portfolio</p>
+
+          <h2 class="section-title">
+            Featured Projects
+          </h2>
+
+        </div>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-card one">
+
+            <div class="overlay">
+
+              <h3>Nova Dashboard</h3>
+
+              <p>
+                Futuristic analytics dashboard
+                with immersive UI systems.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="portfolio-card two">
+
+            <div class="overlay">
+
+              <h3>VisionX AI</h3>
+
+              <p>
+                AI-powered business platform
+                with modern responsive interface.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="portfolio-card three">
+
+            <div class="overlay">
+
+              <h3>Flux Studio</h3>
+
+              <p>
+                Premium branding and digital
+                experience platform.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <p class="section-subtitle">FAQ</p>
+
+          <h2 class="section-title">
+            Frequently Asked Questions
+          </h2>
+
+        </div>
+
+        <div class="faq-grid">
+
+          <div class="faq-item">
+
+            <h3>
+              How long does a project take?
+            </h3>
+
+            <p>
+              Most projects are completed
+              within 2–6 weeks depending
+              on requirements and complexity.
+            </p>
+
+          </div>
+
+          <div class="faq-item">
+
+            <h3>
+              Do you build responsive websites?
+            </h3>
+
+            <p>
+              Yes. Every website is fully optimized
+              for mobile, tablet, and desktop devices.
+            </p>
+
+          </div>
+
+          <div class="faq-item">
+
+            <h3>
+              Do you provide branding services?
+            </h3>
+
+            <p>
+              Absolutely. We offer logo design,
+              brand identity systems, and visual strategy.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+
+      <div class="container cta-content">
+
+        <h2>
+          Ready To Build The Future With Creovisia?
+        </h2>
+
+        <p>
+          Let's create powerful digital experiences
+          that elevate your brand globally.
+        </p>
+
+        <a href="#contact" class="btn primary-btn">
+          Start Your Project
         </a>
-        <a class="social-link sl-ig" href="https://instagram.com/creovisia" target="_blank" rel="noopener">
-          <span class="si"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></span>
-          <span class="s-name">Instagram</span><span class="s-handle">@creovisia</span>
-        </a>
-       <!--- <a class="social-link sl-tw" href="https://x.com/creovisia" target="_blank" rel="noopener">
-          <span class="si"><svg viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
-          <span class="s-name">X (Twitter)</span><span class="s-handle">@creovisia</span>
-        </a>-->
-        <a class="social-link sl-yt" href="https://youtube.com/@creovisia" target="_blank" rel="noopener">
-          <span class="si"><svg viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-          <span class="s-name">YouTube</span><span class="s-handle">@creovisia</span>
-        </a>
-        <!--<a class="social-link sl-th" href="https://threads.net/@creovisia" target="_blank" rel="noopener">
-          <span class="si"><svg viewBox="0 0 24 24" fill="white"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 011.228.012c-.126-.7-.34-1.24-.637-1.594-.421-.504-1.036-.769-1.95-.793-1.018-.03-1.73.322-2.32.793l-1.27-1.62C7.42 5.8 8.686 5.272 10.3 5.248c1.526.025 2.738.512 3.512 1.44.7.842 1.072 2.04 1.104 3.564a9.2 9.2 0 011.706.796c1.213.763 2.065 1.812 2.467 2.734.797 1.829.831 4.692-1.466 6.953-1.769 1.737-3.997 2.604-7.437 2.265zm.049-9.93c-.058 0-.117.001-.176.004-1.044.06-1.87.372-2.315.762-.36.312-.521.708-.491 1.246.059 1.073 1.095 1.68 2.532 1.603 1.107-.06 1.949-.48 2.503-1.248.412-.574.648-1.356.703-2.32a11.64 11.64 0 00-2.756-.047z"/></svg></span>
-          <span class="s-name">Threads</span><span class="s-handle">@creovisia</span>
-        </a>-->
-        <a class="social-link sl-fb" href="https://facebook.com/creovisia" target="_blank" rel="noopener">
-          <span class="si"><svg viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></span>
-          <span class="s-name">Facebook</span><span class="s-handle">creovisia</span>
-        </a>
-        <a class="social-link sl-gh" href="https://github.com/creovisia" target="_blank" rel="noopener">
-          <span class="si"><svg viewBox="0 0 24 24" fill="white"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-          <span class="s-name">GitHub</span><span class="s-handle">creovisia</span>
-        </a>
+
       </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+
+      <div class="container contact-grid">
+
+        <div class="contact-content">
+
+          <p class="section-subtitle">
+            Contact Us
+          </p>
+
+          <h2 class="section-title">
+            Let's Build Something Amazing
+          </h2>
+
+          <p>
+            Contact Creovisia to discuss your
+            next digital product, website,
+            branding, or AI-powered solution.
+          </p>
+
+          <div class="social-links">
+
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+        <form class="contact-form">
+
+          <input type="text" placeholder="Your Name" required>
+
+          <input type="email" placeholder="Your Email" required>
+
+          <textarea placeholder="Your Message"></textarea>
+
+          <button type="submit" class="btn primary-btn">
+
+            Send Message
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+      <h2>Creovisia</h2>
+
+      <p>
+
+        Creovisia is a creative technology company
+        delivering premium digital products,
+        branding systems, modern web experiences,
+        and AI-powered solutions worldwide.
+
+      </p>
+
+      <span>
+        © 2026 Creovisia. All Rights Reserved.
+      </span>
+
     </div>
-  </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">Creovisia</div>
-    <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#join">Join Us</a>
-      <a href="#contact">Contact</a>
-       <a href="founder.html">Founder</a>
-    </div>
-    <div class="footer-copy">© 2025 Creovisia. Turning creativity into reality.</div>
-  </div>
-</footer>
+  </footer>
 
-<div class="toast" id="toast"></div>
+  <!-- JS -->
+  <script src="script.js"></script>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  function toggleMenu(){
-    const m=document.getElementById('mobile-menu');
-    m.classList.toggle('open');
-  }
-  function closeMenu(){
-    document.getElementById('mobile-menu').classList.remove('open');
-  }
-  function showToast(msg){
-    const t=document.getElementById('toast');
-    t.textContent=msg;t.classList.add('show');
-    setTimeout(()=>t.classList.remove('show'),3000);
-  }
-  function handleSubmit(){
-    const fname=document.getElementById('fname').value.trim();
-    const email=document.getElementById('femail').value.trim();
-    const idea=document.getElementById('fidea').value.trim();
-    if(!fname){showToast('Please enter your first name.');return;}
-    if(!email||!email.includes('@')){showToast('Please enter a valid email address.');return;}
-    const age=document.getElementById('fage').value.trim();
-    if(!age||isNaN(age)||age<10||age>100){showToast('Please enter a valid age.');return;}
-    if(!idea){showToast('Please share your idea or message.');return;}
-    document.getElementById('join-form').style.display='none';
-    document.getElementById('success-msg').style.display='block';
-   }
-
-  // Scroll-aware nav
-  window.addEventListener('scroll',()=>{
-    const nav=document.querySelector('nav');
-    nav.style.borderBottomColor=window.scrollY>50?'rgba(201,168,76,0.25)':'rgba(201,168,76,0.18)';
-  });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init('m-BXlirOv6Q0ciDP9');
-
-  // Override handleSubmit with EmailJS version
-  function handleSubmit(){
-    const fname=document.getElementById('fname').value.trim();
-    const email=document.getElementById('femail').value.trim();
-    const age=document.getElementById('fage').value.trim();
-    const idea=document.getElementById('fidea').value.trim();
-    if(!fname){showToast('Please enter your first name.');return;}
-    if(!email||!email.includes('@')){showToast('Please enter a valid email address.');return;}
-    if(!age||isNaN(age)||Number(age)<10||Number(age)>100){showToast('Please enter a valid age.');return;}
-    if(!idea){showToast('Please share your idea or message.');return;}
-
-    const btn=document.querySelector('.submit-btn');
-    btn.textContent='Sending...';
-    btn.disabled=true;
-
-    const params={
-      first_name: fname,
-      last_name: document.getElementById('lname').value.trim()||'—',
-      email: email,
-      phone: document.getElementById('fphone').value.trim()||'—',
-      age: age,
-      source: document.getElementById('fsource').value||'Not specified',
-      message: idea
-    };
-
-    emailjs.send('service_ntg98ka','template_gybp3ce',params)
-      .then(()=>{
-        document.getElementById('join-form').style.display='none';
-        document.getElementById('success-msg').style.display='block';
-      })
-      .catch(()=>{
-        showToast('Something went wrong. Please try again.');
-        btn.textContent='Send Your Message \u2192';
-        btn.disabled=false;
-      });
-  }
-</script>
 </body>
+
 </html>
