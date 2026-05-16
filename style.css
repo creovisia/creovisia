@@ -12,12 +12,12 @@ Professional Responsive Premium CSS
 
 :root {
   --primary: #584CEE;
-  --secondary: #272545;
+  --secondary: #180bc9;
   --background: #07060B;
   --bg: var(--background);
   --card: #151b2f;
   --text: #F9F9F9;
-  --muted: #c9d2ff;
+  --muted: #dbe0fd;
 }
 
 body {
