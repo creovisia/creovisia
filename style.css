@@ -159,6 +159,8 @@ main {
   font-size: 45px;
   font-weight: 800;
   color: #584CEE;
+  position: relative;
+  top: 4px;
 }
 
 .nav-links {
