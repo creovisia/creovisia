@@ -8,7 +8,7 @@ FILE: sitemap.xml
 
   <url>
 
-    <loc>https://www.creovisia.vercel.app/</loc>
+    <loc>https://creovisia.vercel.app/</loc>
 
     <lastmod>2026-05-15</lastmod>
 
@@ -20,7 +20,80 @@ FILE: sitemap.xml
 
   <url>
 
-    <loc>https://www.creovisia.vercel.app/blog/</loc>
+    <loc>https://creovisia.vercel.app/blog/</loc>
+
+    <lastmod>2026-05-15</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>0.3</priority>
+
+  </url>
+
+
+  <url>
+
+    <loc>https://creovisia.vercel.app/#about</loc>
+
+    <lastmod>2026-05-15</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>0.4</priority>
+
+  </url>
+
+  <url>
+
+    <loc>https://creovisia.vercel.app/#services</loc>
+
+    <lastmod>2026-05-15</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>0.6</priority>
+
+  </url>
+
+  <url>
+
+    <loc>https://creovisia.vercel.app/#why-us</loc>
+
+    <lastmod>2026-05-15</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>0.5</priority>
+
+  </url>
+
+  <url>
+
+    <loc>https://creovisia.vercel.app/#portfolio</loc>
+
+    <lastmod>2026-05-15</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>0.7</priority>
+
+  </url>
+
+  <url>
+
+    <loc>https://creovisia.vercel.app/#founder</loc>
+
+    <lastmod>2026-05-15</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>0.9</priority>
+
+  </url>
+
+  <url>
+
+    <loc>https://creovisia.vercel.app/#contact</loc>
 
     <lastmod>2026-05-15</lastmod>
 
